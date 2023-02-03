@@ -132,7 +132,7 @@ COORDINATE_PATH_SETTINGS = {
 COORDINATE_CONFIG_PATH = "D:\\pythonScrapy\\pythonScrapy\\config\\companyCoordinate\\"
 #Set CompanyCoordinate Data Start And End Scrapy Here
 COORDINATE_DATA_START = 0
-COORDINATE_DATA_END = 1
+COORDINATE_DATA_END = 10
 
 #Set Used CompanyCoordinate Data Column Here
 COORDINATE_USE_COLUMN = ["公司名稱","統一編號","公司地址"]

@@ -22,7 +22,8 @@ class CompanycoordinateSpider(scrapy.Spider):
         self.myDfData = pds.df_data(self.path_settings,useColumns=self.usedColumn)
     
     def setRequestUrl(self,requestCount):
-        requestUrl = self.urlHead+self.myDfData.df.at[requestCount,self.companyAddrCol]
+        requestAddress = ccls.getRequestAddress(self,requestCount)
+        requestUrl = self.urlHead+requestAddress
         return requestUrl
         
     def start_requests(self):

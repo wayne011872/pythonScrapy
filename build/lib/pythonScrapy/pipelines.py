@@ -21,6 +21,5 @@ class CompanyCoordinatePipeline:
     
     def process_item(self,item,spider):
         itemsDict = getDictItems(item)
-        print(itemsDict)
         self.mon.insertOneData(itemsDict)
         return item

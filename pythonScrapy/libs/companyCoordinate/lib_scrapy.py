@@ -87,3 +87,7 @@ def getResponseCompanyName(spider,headerCount):
 def getResponseTaxIdNum(spider,headerCount):
     resTaxIdNum = str(spider.myDfData.df.at[headerCount, spider.companyTaxIdCol])
     return resTaxIdNum
+
+def getRequestAddress(spider,requestCount):
+    resAddress = str(spider.myDfData.df.at[requestCount,spider.companyAddrCol])
+    return resAddress
