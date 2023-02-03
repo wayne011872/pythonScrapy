@@ -6,8 +6,20 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-
+import pythonGeneral.database.mongo as pm
+from pythonScrapy.libs.companyCoordinate.lib_scrapy import getConfigDir
+from pythonScrapy.libs.companyCoordinate.lib_scrapy import getDictItems
 
 class PythonscrapyPipeline:
     def process_item(self, item, spider):
+        return item
+
+class CompanyCoordinatePipeline:
+    def __init__(self):
+        configDir = getConfigDir()
+        self.mon = pm.mon(configDir)
+    
+    def process_item(self,item,spider):
+        itemsDict = getDictItems(item)
+        self.mon.insertOneData(itemsDict)
         return item

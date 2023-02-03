@@ -1,0 +1,16 @@
+setup.py
+pythonScrapy/__init__.py
+pythonScrapy/items.py
+pythonScrapy/middlewares.py
+pythonScrapy/pipelines.py
+pythonScrapy/settings.py
+pythonScrapy.egg-info/PKG-INFO
+pythonScrapy.egg-info/SOURCES.txt
+pythonScrapy.egg-info/dependency_links.txt
+pythonScrapy.egg-info/requires.txt
+pythonScrapy.egg-info/top_level.txt
+pythonScrapy/libs/__init__.py
+pythonScrapy/libs/companyCoordinate/__init__.py
+pythonScrapy/libs/companyCoordinate/lib_scrapy.py
+pythonScrapy/spiders/__init__.py
+pythonScrapy/spiders/companyCoordinate.py

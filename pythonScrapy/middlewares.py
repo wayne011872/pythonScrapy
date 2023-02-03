@@ -127,3 +127,18 @@ class RandomDelayMiddleware(object):
         delay = float("%.1f" % delay)
         logging.debug("### time is random delay: %s s###" % delay)
         time.sleep(delay)
+        
+class AddRequestHeaderMiddleware():
+    def __init__(self,headers):
+        self.headers = headers
+    
+    @classmethod
+    def from_crawler(cls,crawler):
+        headers = crawler.settings.get("HEADERS")
+        if headers:
+            return cls(headers)
+        
+    def process_request(self,request,spider):
+        for h in self.headers:
+            request.headers[h] = self.headers[h]
+        request.headers["count"] = spider.count

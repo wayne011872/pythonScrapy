@@ -10,3 +10,9 @@ class PythonscrapyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+class CompanyCoordinateItem(scrapy.Item):
+    companyName = scrapy.Field()
+    taxIdNum = scrapy.Field()
+    latitude = scrapy.Field()
+    longitude = scrapy.Field()
